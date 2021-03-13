@@ -12,7 +12,7 @@ $result = mysqli_query($connection, "SELECT * FROM appointment ORDER BY ID DESC"
 </head>
 
 <body>
-<a href="add.html">Add New Appointment</a><br><a href="search.html">Search for Appointments</a><br/><br/>
+<a href="add.html">Add New Appointment</a><br><a href="search.php">Search for Appointments</a><br/><br/>
 
 <table width='80%' border=0>
     <tr bgcolor='#CCCCCC'>
