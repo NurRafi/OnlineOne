@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a new appointment</title>
+</head>
+<body>
+
+<a href="viewall.php">View Appointments</a>
+<br/><br/>
+
+<form action="add.php" method="post" name="form_add">
+    <table border="0" width="25%">
+        <tr>
+            <td>Doctor's Name</td>
+            <td><input name="DOCTOR_NAME" type="text"></td>
+        </tr>
+        <tr>
+            <td>Patient's Name</td>
+            <td><input name="PATIENT_NAME" type="text"></td>
+        </tr>
+        <tr>
+            <td>Appointment Date</td>
+            <td><input name="DATE" type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input name="submit" type="submit" value="Add Appointment"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
