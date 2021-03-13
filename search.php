@@ -15,28 +15,25 @@
 
 </html>
 <?php
-
+include_once("database.php");
 
 if (isset($_POST['submit'])) {
     $searchValue = $_POST['search'];
-    $con = new mysqli("localhost", "root", "", "onlineone");
-    if ($con->connect_error) {
-        echo "connection Failed: " . $con->connect_error;
-    } else {
-        $sql = "SELECT * FROM appointment WHERE DATE LIKE '%$searchValue%'";
-
-        $result = $con->query($sql);
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo "<td>" . $row['DOCTOR_NAME'] . "</td>";
-            echo "<td>" . $row['PATIENT_NAME'] . "</td>";
-            echo "<td>" . $row['DATE'] . "</td>";
-        }
-
-
+    $sql = "SELECT * FROM appointment WHERE DATE LIKE '%$searchValue%'";
+    $result = $connection->query($sql);
+    ?>
+    <table width='80%' border=0>
+        <tr bgcolor='#CCCCCC'>
+            <td>Doctor's Name</td>
+            <td>Patient's Name</td>
+            <td>Appointment Date</td>
+        </tr>
+    <?php
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>" . $row['DOCTOR_NAME'] . "</td>";
+        echo "<td>" . $row['PATIENT_NAME'] . "</td>";
+        echo "<td>" . $row['DATE'] . "</td><br>";
     }
 }
-
-
-
 ?>
