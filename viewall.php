@@ -27,7 +27,7 @@ $result = mysqli_query($connection, "SELECT * FROM appointment ORDER BY ID DESC"
         echo "<td>" . $res['DOCTOR_NAME'] . "</td>";
         echo "<td>" . $res['PATIENT_NAME'] . "</td>";
         echo "<td>" . $res['DATE'] . "</td>";
-        echo "<td><a href=\"edit.php?id=$res[ID]\">Edit</a> | <a href=\"delete.php?id=$res[ID]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+        echo "<td><a href=\"edit.php?ID=$res[ID]\">Edit</a> | <a href=\"delete.php?ID=$res[ID]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
     }
     ?>
 </table>
