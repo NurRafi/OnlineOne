@@ -10,7 +10,7 @@ if (isset($_POST['update'])) {
     $DATE = $_POST['DATE'];
 
     // checking empty fields
-    if (empty($$DOCTOR_NAME) || empty($PATIENT_NAME) || empty($DATE)) {
+    if (empty($DOCTOR_NAME) || empty($PATIENT_NAME) || empty($DATE)) {
         if (empty($DOCTOR_NAME)) {
             echo "<font color='red'>Doctor's Name field is empty.</font><br/>";
         }
