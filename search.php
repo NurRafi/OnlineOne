@@ -7,6 +7,8 @@
 </head>
 
 <body>
+<a href="viewall.php">View Appointments</a><br><br>
+
 <form action="" method="post">
     <input type="text" placeholder="Search" name="search">
     <button type="submit" name="submit">Search</button>
